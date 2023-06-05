@@ -15,12 +15,14 @@ planned features:
 - better re-playability
 - actual music (really bro???)
 credits:
-Lead Dev - Me
-Thoughts and Prayers - Me
-Coke Dealer - Jamal *(thank you for the 8 kg man)*
-Crystal Dealer - Janette *(thanks fr fr)*
+- Lead Dev - Me
+- Thoughts and Prayers - Me
+- Coke Dealer - Jamal *(thank you for the 8 kg man)*
+- Crystal Dealer - Janette *(thanks fr fr)*
 -----------------------------------
 that's it!
 Contact me:
 Discord: Raymond#7311
 Email (i don't check this at all mostly): raymondmorales098+infiniteelevator@gmail.com
+*extrainfo*
+the credits are a joke (mostly)
