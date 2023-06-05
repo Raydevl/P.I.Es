@@ -3,7 +3,7 @@
 **this project is that but in python**
 note: I am horrible at coding and have learned coding over the past week or two, so don't get mad that a person whom lost 7/8th of their brain could code better than me
 Features:
- -""procedural generation"" (not really, or someting, I don't know)
+ - ""procedural generation"" (not really, or someting, I don't know)
  - infinite playability (not really but ok)
  - procedural floor and room generation (I already said it but ***ok***)
  - that's about it (wow this is shitty)
