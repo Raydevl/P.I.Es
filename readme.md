@@ -24,15 +24,3 @@ that's it!
 Contact me:
 Discord: Raymond#7311
 Email (i don't check this at all mostly): raymondmorales098+infiniteelevator@gmail.com
-***FAQ***
-Q: Where is Jamal?
-A: Camden, NJ
-Q: Say my name.
-A: Fuck you
-Q: Google en passant
-A: new response just dropped
-Q: actual zombie
-..
-Q: why did my father leave me?
-A: You.
-that's it lol
