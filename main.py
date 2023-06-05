@@ -19,17 +19,22 @@ def elewait(): #defines a elewait function, this is the elevator slowly going do
     if roominput.lower() == 'n':
       elewait()
     elif roominput.lower() == 'y':
-      print("I'll get back to this")
+      print("elefloor()")
     else:
       print("Invalid input. Please enter 'y' or 'n'.")
   time.sleep(2.75) #waits 2.75 seconds before generating next 'elewaitmgen' but only if roomstatus is in the 'hasn't reached a floor yet' state.
 init()
 def elefloor(): #defines the 'floor' which wil be generated when you say 'y'
-  matflwall = random.choice([])
-  colfl = random.choice(["grey", "black", "yellow", "white"])
+  matflwall = random.choice(["stainless steel", "Stone", "Wooden", "Marble", "Concrete", "Log")
+  colfl = random.choice([White", "Yellow", "Soft Yellow", "Dark Blue", "Soft Blue", "Dark Red", "Soft Red"])
+  luxcolfl = random.choice([White", "Yellow", "Soft Yellow", "Dark Blue", "Soft Blue", "Dark Red", "Soft Red"]) 
+                            ##the colfl's are needed to be seperate I swear!11!
   musicfl = random.choice(["Resonance by home", "Around the world by Daft Punk", "Fortunate Son by CCR", "Gymnopedie by Erik Saite", "Generic Lobby Music", "Dream On By Aerosmith", "Going Down by Jake Chudnow", "It's My Life By The Animals", "Heartaches By Al Bowly", "Less Than by Nine Inch Nails"])
-  luxcolfl = random.choice(["White", "Yellow", "Soft Yellow", "Dark Blue", "Soft Blue", "Dark Red", "Soft Red"])
   luxbrightfl = random.choice(["Dimly Lit", "Brightly Lit", "Averagly Lit"])
+  flstructure = random.choice(["Mall", "Book Store", "Parking Garage", "Interior Plaza"])
+  luxtype = random.choice(["Flourescent", "Oil", "L.E.D"]}
+  elefloorgen = f"you have stepped out of the elevator and are located in a {colfl} {matflwall} {flstructure}, the {flstructure} has a seies of 5 {luxbrightfl} {luxtype} lights."
+  print (elefloorgen)
   
 print(Back.BLACK + "A INFINITE ELEVATOR GAME" + Back.RESET)
 print(Back.RED + "CREATED BY rayDEVL" + Back.RESET)
