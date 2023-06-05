@@ -1,6 +1,6 @@
 **Procedurally-generated Infinite Elevator (story)**
 
-a procedurally generated (if you can call it that) story generator set inside of an elevator, that's about it. 
+a procedurally generated (if you can call it that) story generator set inside of an elevator, that's about it. This is based off of 'Briery' a old project that I'm still *working* on.
 
 Note: I am horrible at coding and have learned coding over the past week or two, so don't get mad that a person who lost 7/8th of their brain could code better than me.
 
