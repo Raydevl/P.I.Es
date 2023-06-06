@@ -27,5 +27,5 @@ Email (I don't check this at all mostly): raymondmorales098+infiniteelevator@gma
 
 *Extrainfo*
 
-Latest_Version = '1.2.3-alpha'
+Latest_Version = '1.2.6-alpha'
 
