@@ -1,4 +1,3 @@
-import os
 import time
 import random
 import colorama
@@ -23,38 +22,50 @@ def elewait():
         else:
             print("Invalid input. Please enter 'y' or 'n'.")
     time.sleep(4)  # waits 4 seconds before generating the next 'elewaitmgen' but only if roomstatus is in the 'hasn't reached a floor yet' state.
-init()
+init()  
 def elefloor():  
     matflwall = random.choice(["stainless steel", "Stone", "Wooden", "Marble", "Concrete", "Log"])
     colfl = random.choice(["White", "Yellow", "Soft Yellow", "Dark Blue", "Soft Blue", "Dark Red", "Soft Red"])
-    luxcolfl = random.choice(["White", "Yellow", "Soft Yellow", "Dark Blue", "Soft Blue", "Dark Red", "Soft Red"])
     musicfl = random.choice(["Resonance by home", "Around the world by Daft Punk", "Fortunate Son by CCR", "Gymnopedie by Erik Saite", "Generic Lobby Music", "Dream On By Aerosmith", "Going Down by Jake Chudnow", "It's My Life By The Animals", "Heartaches By Al Bowly", "Less Than by Nine Inch Nails"])
     luxbrightfl = random.choice(["Dimly Lit", "Brightly Lit", "Averagly Lit"])
     flstructure = random.choice(["Mall", "Book Store", "Parking Garage", "Interior Plaza"])
     luxtype = random.choice(["Fluorescent", "Oil", "L.E.D"])
     volmusic2 = random.choice(["Loud", "Quiet", "Comfortable"])
-    roomtype = random.choice(["Hotel", "Hostel", "Lounge"])
     roomgenif = random.choice(["There is a room which you can enter that is located", "There is no room, you can continue to walk"])
     directiongen = random.choice(["left", "right"])
-    elefloorgen = f"You have stepped out of the elevator and are located in a {colfl} {matflwall} {flstructure}. The {flstructure} has a series of 5 {luxbrightfl} {luxtype} lights. On the speakers, {musicfl} is playing at a {volmusic2} volume. {roomgenif} to your {directiongen}"
+    roomgenifcontinued = random.choice(["come across another room.", "do not come across another room and continue to walk."])
+    elefloorgen = f"you are now located in a {colfl} {flstructure}. The {flstructure} has {luxbrightfl} {luxtype} lights. On the speakers, {musicfl} is playing at a {volmusic2} volume. {roomgenif} to your {directiongen}"
     print(Back.BLACK + elefloorgen + Back.RESET)
-    
+    elefloorcontinued = f"You continue to walk, the speakers are playing {musicfl} at {volmusic2}, you {roomgenifcontinued}, the {luxtype} lights continuing to illuminate your surroundings."
     if roomgenif == "There is a room which you can enter that is located":
         eleroomstatus = input("Do you enter the room (y/n) ")
         if eleroomstatus.lower() == 'n':
-            elewait()
+            print(elefloorcontinued)
         elif eleroomstatus.lower() == 'y':
-            print("this feature has not been implemented yet :D") #todo: create eleroom() function
+            eleroom() #doesn't work
         else:
             time.sleep(5)
-def eleroom(): #creates a function which will generate a room using elefloor()
-  
 
-print(Back.BLACK + "A INFINITE ELEVATOR GAME" + Back.RESET)
+def eleroom():
+  roomtype = random.choice(["Hotel", "Hostel", "Lounge"])
+  yearoomtype = random.choice(["1950s", "1960s", "1940s", "1930s"])
+  musicrm = random.choice(["La Vie en rose by Louis Armstrong", "100 Years by Clover", "La Campanella by Chopin", "House of the Rising sun by The Animals", "It's just a burning memory by The Caretaker", "Libet's Delay by The Caretaker", "Betryal by Light", "The Existential Threat by Sparks", "Dead Weight by Jack Stauber", "Hello, World! by Louie Zong", "Mr. Sandman by The Chordettes"])
+  musicplayrm = random.choice(["1950s Jukebox", "1930s Radio", "1930s Vinyl Record player", "Casette Player", "Discarded iPod"])
+  colrm = random.choice(["White", "Yellow", "Soft Yellow", "Dark Blue", "Light Blue", "Dark Red", "Light Red"])
+  rmwall = random.choice(["Wallpaper", "Vinyl", "Marble", "Wood"])
+  luxtyperm = random.choice(["Oil", "Flourescent", "Incandescent", "Neon"])
+  eleroomgen = f"you enter a {yearoomtype} {colrm} {roomtype}, the {roomtype} has {colrm} {rmwall} walls and {luxtyperm} lights, a {musicplayrm} is playing {musicrm}."
+        eleroomstatus = input("Do you exit the room (y/n) ")
+        if eleroomstatus.lower() == 'n':
+            print("You stay in the room")
+        elif eleroomstatus.lower() == 'y':
+            elefloor()
+ print(Back.BLACK + "A INFINITE ELEVATOR GAME" + Back.RESET)
 print(Back.RED + "CREATED BY rayDEVL" + Back.RESET)
 print(Back.BLACK + "STARTED ON 6/4/23" + Back.RESET)
 print(Back.RED + "YOUR GAME WILL START IN 5 SECONDS" + Back.RESET)
 print(Back.BLACK + "-----------------------" + Back.RESET)
+print(Back.WHITE + "v1.2.3" + Back.RESET)
 time.sleep(5)
 while True:
     elewait()
