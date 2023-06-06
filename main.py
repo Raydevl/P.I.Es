@@ -10,7 +10,7 @@ def elewait():
     luxcolor = random.choice(["soft yellow", "soft white"])
     luxbright = random.choice(["dimly lit", "brightly lit", "extremely bright"])
     roomstatus = random.choice(["has reached a floor", "hasn't reached a floor yet"])  # status of whether the elevator is on a floor or not, very important later.
-    elewaitmgen = f"You are standing in a {colwall} colored {matwall} Elevator which {roomstatus}, the elevator lights are {luxbright} with a {luxcolor} shade. The elevator's speakers are playing {music} at a {volmusic} Volume."
+    elewaitmgen = f"You are standing in a {colwall} colored {matwall} Elevator which {roomstatus}, the elevator lights are {luxbright} with a {luxcolor} shade. The elevator's speakers are playing {music} at a {volmusic} Volume." 
     print(elewaitmgen)
     if roomstatus == "has reached a floor":
         roominput = input("Do you walk out the elevator doors? y/n ")
@@ -33,7 +33,7 @@ def elefloor():
     volmusic2 = random.choice(["Loud", "Quiet", "Comfortable"])
     roomgenif = random.choice(["There is a room which you can enter that is located", "There is no room, you can continue to walk"])
     directiongen = random.choice(["left", "right"])
-    roomgenifcontinued = random.choice(["come across another room.", "do not come across another room and continue to walk."])
+    roomgenifcontinued = random.choice(["come across another room.", "do not come across another room and continue to walk."]) ##this and 'elefloorcontinued' are gonna be removed soon.
     elefloorgen = f"you are now located in a {colfl} {flstructure}. The {flstructure} has {luxbrightfl} {luxtype} lights. On the speakers, {musicfl} is playing at a {volmusic2} volume. {roomgenif} to your {directiongen}"
     print(Back.BLACK + elefloorgen + Back.RESET)
     elefloorcontinued = f"You continue to walk, the speakers are playing {musicfl} at {volmusic2}, you {roomgenifcontinued}, the {luxtype} lights continuing to illuminate your surroundings."
@@ -43,9 +43,8 @@ def elefloor():
             print(elefloorcontinued)
         elif eleroomstatus.lower() == 'y':
             eleroom() #doesn't work
-        else:
-            time.sleep(5)
 
+    time.sleep(5) #does same thing as 'time.sleep(4)' on line 24.
 def eleroom():
   roomtype = random.choice(["Hotel", "Hostel", "Lounge"])
   yearoomtype = random.choice(["1950s", "1960s", "1940s", "1930s"])
@@ -59,6 +58,8 @@ def eleroom():
   roomele = input("Do you exit the room (y/n) ")
   if roomele.lower() == 'n':
     print("You stay in the room")
+    time.sleep(10)
+    print("you leave the room because there is nothing to do.")
   elif roomele.lower() == 'y':
     elefloor()
 print(Back.BLACK + "A INFINITE ELEVATOR GAME" + Back.RESET)
@@ -66,7 +67,7 @@ print(Back.RED + "CREATED BY rayDEVL" + Back.RESET)
 print(Back.BLACK + "STARTED ON 6/4/23" + Back.RESET)
 print(Back.RED + "YOUR GAME WILL START IN 5 SECONDS" + Back.RESET)
 print(Back.BLACK + "-----------------------" + Back.RESET)
-print(Back.WHITE + "v1.2.4" + Back.RESET)
+print(Back.WHITE + "v1.2.5" + Back.RESET)
 time.sleep(5)
 while True:
     elewait()
