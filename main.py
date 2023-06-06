@@ -55,17 +55,18 @@ def eleroom():
   rmwall = random.choice(["Wallpaper", "Vinyl", "Marble", "Wood"])
   luxtyperm = random.choice(["Oil", "Flourescent", "Incandescent", "Neon"])
   eleroomgen = f"you enter a {yearoomtype} {colrm} {roomtype}, the {roomtype} has {colrm} {rmwall} walls and {luxtyperm} lights, a {musicplayrm} is playing {musicrm}."
-        eleroomstatus = input("Do you exit the room (y/n) ")
-        if eleroomstatus.lower() == 'n':
-            print("You stay in the room")
-        elif eleroomstatus.lower() == 'y':
-            elefloor()
- print(Back.BLACK + "A INFINITE ELEVATOR GAME" + Back.RESET)
+  print(eleroomgen)
+  roomele = input("Do you exit the room (y/n) ")
+  if roomele.lower() == 'n':
+    print("You stay in the room")
+  elif roomele.lower() == 'y':
+    elefloor()
+print(Back.BLACK + "A INFINITE ELEVATOR GAME" + Back.RESET)
 print(Back.RED + "CREATED BY rayDEVL" + Back.RESET)
 print(Back.BLACK + "STARTED ON 6/4/23" + Back.RESET)
 print(Back.RED + "YOUR GAME WILL START IN 5 SECONDS" + Back.RESET)
 print(Back.BLACK + "-----------------------" + Back.RESET)
-print(Back.WHITE + "v1.2.3" + Back.RESET)
+print(Back.WHITE + "v1.2.4" + Back.RESET)
 time.sleep(5)
 while True:
     elewait()
