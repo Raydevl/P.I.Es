@@ -37,7 +37,7 @@ def elefloor(current_floor):
     elefloorgen = f"you are now located in a {colfl} {flstructure}. The {flstructure} has {luxbrightfl} {luxtype} lights. On the speakers, {musicfl} is playing at a {volmusic2} volume. {roomgenif} to your {directiongen}"
     print(Back.BLACK + elefloorgen + Back.RESET)
     elefloorcontinued = f"You continue to walk, the speakers are playing {musicfl} at {volmusic2}, you {roomgenifcontinued}, the {luxtype} lights continuing to illuminate your surroundings."
-  current_floor = random.randint(1, 100)
+    current_floor = random.randint(1, 100)
     if roomgenif == "There is a room which you can enter that is located":
         eleroomstatus = input("Do you enter the room (y/n) ")
         if eleroomstatus.lower() == 'n':
@@ -59,8 +59,7 @@ def eleroom():
   roomele = input("Do you exit the room (y/n) ")
   if roomele.lower() == 'n':
     print("You stay in the room")
-    time.sleep(10)
-    print("you leave the room because there is nothing to do.")
+   
   elif roomele.lower() == 'y':
     elefloor(current_floor)
 print(Back.BLACK + "A INFINITE ELEVATOR GAME" + Back.RESET)
@@ -71,4 +70,4 @@ print(Back.BLACK + "-----------------------" + Back.RESET)
 print(Back.WHITE + "v1.2.6" + Back.RESET)
 time.sleep(5)
 while True:
-    elewait(current_floor) ##patchnotes from 1.2.6, 'current_floor' is a random variable from 1 - 100 to eleroom's generated floor, in order to allow the player to backtrack into the floor.
+    elewait(current_floor) ##patchnotes from 1.2.6, 'current_floor' is going to be a method to assign a random variable from 1 - 100 to eleroom's generated floor, in order to allow the player to backtrack into the floor.
