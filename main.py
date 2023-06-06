@@ -18,12 +18,12 @@ def elewait():
             elewait()
         elif roominput.lower() == 'y':
             while True:
-                elefloor()
+                elefloor(current_floor)
         else:
             print("Invalid input. Please enter 'y' or 'n'.")
     time.sleep(4)  # waits 4 seconds before generating the next 'elewaitmgen' but only if roomstatus is in the 'hasn't reached a floor yet' state.
 init()  
-def elefloor():  
+def elefloor(current_floor):  
     matflwall = random.choice(["stainless steel", "Stone", "Wooden", "Marble", "Concrete", "Log"])
     colfl = random.choice(["White", "Yellow", "Soft Yellow", "Dark Blue", "Soft Blue", "Dark Red", "Soft Red"])
     musicfl = random.choice(["Resonance by home", "Around the world by Daft Punk", "Fortunate Son by CCR", "Gymnopedie by Erik Saite", "Generic Lobby Music", "Dream On By Aerosmith", "Going Down by Jake Chudnow", "It's My Life By The Animals", "Heartaches By Al Bowly", "Less Than by Nine Inch Nails"])
@@ -37,12 +37,13 @@ def elefloor():
     elefloorgen = f"you are now located in a {colfl} {flstructure}. The {flstructure} has {luxbrightfl} {luxtype} lights. On the speakers, {musicfl} is playing at a {volmusic2} volume. {roomgenif} to your {directiongen}"
     print(Back.BLACK + elefloorgen + Back.RESET)
     elefloorcontinued = f"You continue to walk, the speakers are playing {musicfl} at {volmusic2}, you {roomgenifcontinued}, the {luxtype} lights continuing to illuminate your surroundings."
+  current_floor = random.randint(1, 100)
     if roomgenif == "There is a room which you can enter that is located":
         eleroomstatus = input("Do you enter the room (y/n) ")
         if eleroomstatus.lower() == 'n':
-            print(elefloorcontinued)
+            elefloor(current_floor) #patchnote1.2.6: this was all that was in this update really, and line 40
         elif eleroomstatus.lower() == 'y':
-            eleroom() #doesn't work
+            eleroom() #works
 
     time.sleep(5) #does same thing as 'time.sleep(4)' on line 24.
 def eleroom():
@@ -61,13 +62,13 @@ def eleroom():
     time.sleep(10)
     print("you leave the room because there is nothing to do.")
   elif roomele.lower() == 'y':
-    elefloor()
+    elefloor(current_floor)
 print(Back.BLACK + "A INFINITE ELEVATOR GAME" + Back.RESET)
 print(Back.RED + "CREATED BY rayDEVL" + Back.RESET)
 print(Back.BLACK + "STARTED ON 6/4/23" + Back.RESET)
 print(Back.RED + "YOUR GAME WILL START IN 5 SECONDS" + Back.RESET)
 print(Back.BLACK + "-----------------------" + Back.RESET)
-print(Back.WHITE + "v1.2.5" + Back.RESET)
+print(Back.WHITE + "v1.2.6" + Back.RESET)
 time.sleep(5)
 while True:
-    elewait()
+    elewait(current_floor) ##patchnotes from 1.2.6, 'current_floor' is a random variable from 1 - 100 to eleroom's generated floor, in order to allow the player to backtrack into the floor.
