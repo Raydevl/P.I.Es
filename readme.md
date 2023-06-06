@@ -7,7 +7,7 @@ Note: I am horrible at coding and have learned coding over the past week or two,
 Features:
 - "Procedural generation" (not really, or something, I don't know)
 - Infinite playability (not really but okay)
-- Procedural floor
+- Procedural floor and room generation
 
 Planned features:
 - NPC's
@@ -16,7 +16,6 @@ Planned features:
 - Greater dialogue
 - Better replayability
 - Actual music
-- Room Generation
 
 -----------------------------------
 
